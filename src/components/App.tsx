@@ -1,25 +1,21 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
+import { Text } from "./input/Text";
+import { TimeProvider } from "../context/TimeContext";
+import { Time } from "./Time/Time";
+import { useTime } from "../context/TimeContext";
+import { Month } from "./Month/Month";
+import { Result } from "./Result/Result";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <TimeProvider>
+      <div>
+        <Time />
+        <Month />
+        <Result />
+      </div>
+    </TimeProvider>
   );
 }
 

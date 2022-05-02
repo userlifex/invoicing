@@ -1,0 +1,43 @@
+.text-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.text-container > label {
+  margin-bottom: 0.5rem;
+  color: var(--dark-blue);
+  font-weight: bold;
+}
+
+.text-container > input {
+  border: 1px solid var(--blue);
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--dark-blue);
+}
+
+.sm {
+  width: 3rem;
+}
+
+.md {
+  width: 6rem;
+}
+
+.lg {
+  width: 9rem;
+}
+
+/*Remove arrow lines*/
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
